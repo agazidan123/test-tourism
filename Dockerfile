@@ -1,5 +1,5 @@
 # Use a specific Python runtime as a parent image
-FROM python:3.12.0
+FROM python:3.11.0
 
 # Set the working directory to /app
 WORKDIR /app
@@ -30,4 +30,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run main.py when the container launches
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["python", "main.py"]
